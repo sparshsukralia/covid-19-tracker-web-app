@@ -20,8 +20,8 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <h1 className={styles.heading}>COVID-19 TRACKER</h1>
-        <Cards data={data} />
         <CountryPicker />
+        <Cards data={data} />
       </div>
     );
   }
