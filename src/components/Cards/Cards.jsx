@@ -5,12 +5,15 @@ import CountUp from "react-countup";
 import cx from "classnames";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-  console.log(confirmed);
+  console.log(lastUpdate);
   if (!confirmed) {
     return "loading..";
   }
   return (
     <div className={styles.container}>
+      <h3 className={styles.date}>
+        Latest of Date: {new Date(lastUpdate).toLocaleDateString()}
+      </h3>
       <Grid container spacing={3} justify="center">
         <Grid
           item
@@ -33,11 +36,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 />
               </h1>
             </Typography>
-            <Typography color="textSecondary">
-              <h3>{new Date(lastUpdate).toDateString()}</h3>
-            </Typography>
+            <Typography color="textSecondary"></Typography>
             <Typography variant="body2">
-              <h2>Active Cases of Covid-19</h2>
+              <h2>Total cases of COVID-19</h2>
             </Typography>
           </CardContent>
         </Grid>
@@ -62,11 +63,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 />
               </h1>
             </Typography>
-            <Typography color="textSecondary">
-              <h3>{new Date(lastUpdate).toDateString()}</h3>
-            </Typography>{" "}
+            <Typography color="textSecondary"></Typography>{" "}
             <Typography variant="body2">
-              <h2>Recoveries from Covid-19</h2>
+              <h2>Recoveries from COVID-19</h2>
             </Typography>
           </CardContent>
         </Grid>
@@ -91,11 +90,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 />
               </h1>
             </Typography>
-            <Typography color="textSecondary">
-              <h3>{new Date(lastUpdate).toDateString()}</h3>
-            </Typography>{" "}
+            <Typography color="textSecondary"></Typography>{" "}
             <Typography variant="body2">
-              <h2>Deaths from Covid-19</h2>
+              <h2>Deaths from COVID-19</h2>
             </Typography>
           </CardContent>
         </Grid>
