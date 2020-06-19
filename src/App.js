@@ -19,6 +19,8 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
+        <h1 className={styles.heading}>COVID-19</h1>
+        <h3>REACT WEB APP</h3>
         <Cards data={data} />
         <CountryPicker />
       </div>
