@@ -40,7 +40,7 @@
 }
 
 .recovered {
-  border: 5px solid rgba(0, 255, 0, 0.5);
+  border: 5px solid rgba(0, 255, 0, 0.8);
 }
 
 .deaths {
@@ -64,5 +64,20 @@
 
   .numbers3 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .card {
+    padding: 0 0.2rem !important;
+  }
+
+  .container h1 {
+    margin: 0 1rem !important;
+  }
+
+  .container h2 {
+    margin: 0 0.5rem !important;
+    margin-top: 0.3rem !important;
   }
 }
