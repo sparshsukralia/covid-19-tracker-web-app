@@ -22,7 +22,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { data } = this.state;
+    const { data, country } = this.state;
 
     return (
       <div className={styles.container}>
